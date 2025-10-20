@@ -24,7 +24,7 @@ header {
     justify-content: space-between;
     align-items: center;
     position: sticky;
-    height: 80px;
+    height: 100px;
     padding: 10px;
     border-radius: 0px 0px 8px 8px;
     box-shadow: 1px 1px 5px black;
@@ -38,33 +38,38 @@ header {
     border-radius: 50%;
     border: 5px solid white;
     outline: 5px solid var(--cor2);
+
+    &:hover {
+        padding: 2px;
+    }
 }
 
 .icon {
-    width: 50px;
-    padding: 10px;
+    width: 80px;
+    padding: 0px;
     aspect-ratio: 1/1;
+    box-shadow: 2px 3px 10px black;
+
 }
 
 ul {
-    width: 80vw;
     display: flex;
     list-style: none;
     justify-content: flex-end;
-    gap: 15px;
+    gap: 10px;
     align-items: center;
+    
 
     img {
         border: 1px solid rgba(0, 0, 0, 0.268);
         border-radius: 30%;
-        background: #e3e9f7;
+        background: white;
 
     }
 
     img:hover {
-        border-radius: 8px;
         padding: 5px;
-        background-color: white;
+        background-color: #e3e9f7;
         box-shadow: 2px 3px 10px black;
         transition: background-color .5s, padding .5s, box-shadow .5s;
     }
@@ -93,14 +98,14 @@ section#grade-destaques {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
-    gap: 10px;
+    gap: 20px;
 }
 
 .destaques {
     justify-content: flex-end;
     padding: 10px;
     height: 100%;
-    width: 44vw;
+    width: 40vw;
     display: flex;
     flex-direction: column;
     box-shadow: 2px 3px 10px black;
@@ -110,16 +115,19 @@ section#grade-destaques {
     img {
         width: 100%;
         padding: 20px;
+        aspect-ratio: 1/1;
     }
 
     .botao-ver-mais {
         display: flex;
         position: absolute;
-        right: 0;
-        top: 0;
+        right: 5px;
+        top: 5px;
     }
 
     div>a.ver-mais {
+        font-weight: bold;
+        font-size: 1em;
         box-shadow: 2px 3px 10px black;
         text-align: center;
         align-content: center;
@@ -129,6 +137,10 @@ section#grade-destaques {
         text-decoration: none;
         background-color: #7bb868;
         border-radius: 10px;
+
+        &:hover {
+            background-color: black;
+        }
     }
 
     div>h3 {
@@ -137,19 +149,27 @@ section#grade-destaques {
     }
 
     div.shopee {
-        padding: 2px;
-        font-weight: bold;
+        padding: 2px;        
         margin: 5px 5px;
-        border: 2px solid rgb(230, 158, 57);
-        font-size: 1.1em;
+        border: 2px solid rgb(230, 158, 57);        
         text-align: center;
-        background-color: white;
+        background-color: blac;
         border-radius: 10px;
         box-shadow: 2px 3px 7px black;
 
         a {
+            font-size: 2em;
+            font-weight: bold;
             color: red;
             text-decoration: none;
+        }
+        
+        &:hover {
+            background-color: rgb(229, 170, 88);
+
+            a {
+                color: black;
+            }
         }
 
     }
@@ -159,7 +179,7 @@ section#grade-destaques {
         font-weight: bold;
         margin: 2.5px 5px;
         border: 2px solid rgb(53, 121, 239);
-        font-size: 1.1em;
+        font-size: 2em;
         text-align: center;
         background-color: white;
         border-radius: 10px;
@@ -168,6 +188,14 @@ section#grade-destaques {
         a {
             color: rgb(3, 3, 164);
             text-decoration: none;
+        }
+
+        &:hover {
+            background-color: rgb(3, 3, 164);
+
+            a {
+                color: white;
+            }
         }
     }
 }
