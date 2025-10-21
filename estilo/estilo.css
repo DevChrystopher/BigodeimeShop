@@ -7,195 +7,45 @@
     font-family: Arial, Helvetica, sans-serif;
 }
 
-:root {
-    --cor1: #F2F2F0;
-    --cor2: #b1a294;
-    --cor3: #e3e9f7;
-    --cor4: #737373;
-    --cor5: #0D0D0D;
-}
-
+html,
 body {
+    width: 100%;
     overflow-x: hidden;
 }
 
-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    position: sticky;
-    height: 100px;
-    padding: 10px;
-    border-radius: 0px 0px 8px 8px;
-    box-shadow: 1px 1px 5px black;
-    background: linear-gradient(to bottom, var(--cor2), var(--cor1));
-    top: 0;
+#topo {
+    background-image: linear-gradient(to bottom, rgb(75, 59, 59), white);
+    position: fixed;
+    width: 100vw;    
+    height: 13vh;
+    border-radius: 0px 0px 10px 10px;
+    box-shadow: 2px 2px 5px black;
+    align-content: center;
     z-index: 1;
-}
-
-.logo {
-    height: 70px;
-    border-radius: 50%;
-    border: 5px solid white;
-    outline: 5px solid var(--cor2);
-
-    &:hover {
-        padding: 2px;
-    }
-}
-
-.icon {
-    width: 80px;
-    padding: 0px;
-    aspect-ratio: 1/1;
-    box-shadow: 2px 3px 10px black;
-
 }
 
 ul {
     display: flex;
+    flex-direction: row;
+    justify-content: space-around;
     list-style: none;
-    justify-content: flex-end;
-    gap: 10px;
-    align-items: center;
     
+}
 
-    img {
-        border: 1px solid rgba(0, 0, 0, 0.268);
-        border-radius: 30%;
-        background: white;
+img.icon {
+    background-color: white;
+    border-radius: 50%;
+    width: 12vw;
+    aspect-ratio: 1/1;
+    border: 5px solid rgb(75, 59, 59);
+    outline: 5px solid white;
+    box-shadow: 2px 2px 15px black;
 
-    }
 
-    img:hover {
-        padding: 5px;
-        background-color: #e3e9f7;
-        box-shadow: 2px 3px 10px black;
-        transition: background-color .5s, padding .5s, box-shadow .5s;
+
+    &:hover{
+        border: 5px solid white;
+        outline: 5px solid black;
     }
 }
 
-main {
-    display: grid;
-    grid-template-columns: auto 90vw auto;
-    grid-template-rows: auto auto auto;
-    margin-top: 30px;
-}
-
-#principal {
-    grid-column: 2;
-
-}
-
-.banner {
-    width: 90vw;
-    border-radius: 15px;
-    box-shadow: 2px 3px 10px black;
-}
-
-section#grade-destaques {
-    margin-top: 40px;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-}
-
-.destaques {
-    justify-content: flex-end;
-    padding: 10px;
-    height: 100%;
-    width: 40vw;
-    display: flex;
-    flex-direction: column;
-    box-shadow: 2px 3px 10px black;
-    border-radius: 10px;
-    position: relative;
-
-    img {
-        width: 100%;
-        padding: 20px;
-        aspect-ratio: 1/1;
-    }
-
-    .botao-ver-mais {
-        display: flex;
-        position: absolute;
-        right: 5px;
-        top: 5px;
-    }
-
-    div>a.ver-mais {
-        font-weight: bold;
-        font-size: 1em;
-        box-shadow: 2px 3px 10px black;
-        text-align: center;
-        align-content: center;
-        color: white;
-        width: 80px;
-        height: 40px;
-        text-decoration: none;
-        background-color: #7bb868;
-        border-radius: 10px;
-
-        &:hover {
-            background-color: black;
-        }
-    }
-
-    div>h3 {
-        text-align: center;
-        font-weight: bold;
-    }
-
-    div.shopee {
-        padding: 2px;        
-        margin: 5px 5px;
-        border: 2px solid rgb(230, 158, 57);        
-        text-align: center;
-        background-color: blac;
-        border-radius: 10px;
-        box-shadow: 2px 3px 7px black;
-
-        a {
-            font-size: 2em;
-            font-weight: bold;
-            color: red;
-            text-decoration: none;
-        }
-        
-        &:hover {
-            background-color: rgb(229, 170, 88);
-
-            a {
-                color: black;
-            }
-        }
-
-    }
-
-    div.mercado-livre {
-        padding: 2px;
-        font-weight: bold;
-        margin: 2.5px 5px;
-        border: 2px solid rgb(53, 121, 239);
-        font-size: 2em;
-        text-align: center;
-        background-color: white;
-        border-radius: 10px;
-        box-shadow: 2px 3px 7px black;
-
-        a {
-            color: rgb(3, 3, 164);
-            text-decoration: none;
-        }
-
-        &:hover {
-            background-color: rgb(3, 3, 164);
-
-            a {
-                color: white;
-            }
-        }
-    }
-}
