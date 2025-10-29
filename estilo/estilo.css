@@ -63,23 +63,20 @@ img.icon {
   box-shadow: 2px 2px 15px black;
 }
 
-
-h2{
-    
-    margin: auto;
-    padding: 5px;
-    margin-top: 5%;
-    font-size: 4em; 
-    font-weight: bolder;
-    text-align: center;
-    text-shadow: 2px 2px 15px black;;
-    width: 60%;
-    color: white;
-    border-radius: 12px;
-    background-image: linear-gradient(to bottom, #a5a398, white);
-    box-shadow: 2px 2px 15px black;
-
-  }
+h2 {
+  margin: auto;
+  padding: 5px;
+  margin-top: 5%;
+  font-size: 4em;
+  font-weight: bolder;
+  text-align: center;
+  text-shadow: 2px 2px 15px black;
+  width: 60%;
+  color: white;
+  border-radius: 12px;
+  background-image: linear-gradient(to bottom, #a5a398, white);
+  box-shadow: 2px 2px 15px black;
+}
 
 #grade-destaque {
   gap: 3vw;
@@ -88,8 +85,6 @@ h2{
   justify-content: center;
   margin-top: 5%;
   margin-bottom: 5%;
-
-  
 
   .destaque {
     display: flex;
@@ -131,6 +126,10 @@ h2{
       text-decoration: none;
       background-color: #7bb868;
       border-radius: 10px;
+
+      &:hover {
+        color: black;
+      }
     }
 
     h3 {
@@ -214,20 +213,22 @@ h2{
 
   iframe {
     max-width: 90vw;
+    border-radius: 20px;
   }
 }
 
 footer {
+  font-weight: bold;
   height: 7vh;
   padding: 10px;
   align-content: center;
   text-align: center;
   font-size: 2em;
   background-image: linear-gradient(to bottom, #a5a398, white);
-  text-shadow: 2px 3px 7px black; 
+  text-shadow: 2px 3px 7px black;
+  margin-top: 100px ;
 
   a {
-    
     text-decoration: none;
     color: white;
     font-weight: bold;
@@ -236,5 +237,93 @@ footer {
       color: yellow;
     }
   }
-  
+}
+
+@media screen and (min-width: 768px) {
+  #topo {
+    max-height: 15vh;
+  }
+
+  img.icon {
+    max-width: 60px;
+  }
+
+  ul {
+    margin-right: 2%;
+    gap: 20px;
+    justify-content: flex-end;
+  }
+
+  .home {
+    margin-left: 2%;
+    position: absolute;
+    left: 0;
+  }
+
+   
+  h2 {
+    grid-column: 3 / 4;
+    margin-top: 150px;
+    font-size: 2em;
+    width: 300px;
+  }
+
+  #principal {
+    display: grid;
+    grid-template-columns: 50px auto 1400px 10px;
+  }
+
+  section#carrossel {
+    position: fixed;
+    left: 50px;
+    top: 50px;
+    grid-column: 2 / 3;
+
+    .banner {
+      width: 200px;
+    }
+  }
+
+   section#grade-destaque {
+    grid-column: 3 / 4;
+    margin-top: 10px;
+    
+    
+    div.destaque {       
+      max-width: 200px;
+      height: 380px;
+      
+      a.ver-mais {
+        font-size: 0.8em;
+      }
+
+      h3 {
+        font-size: 1.5em;
+        height: 3em;
+      }
+
+      .shopee {
+          
+        a {
+          font-size: 1em;
+        }
+      }
+
+      .mercado-livre {
+        a {
+          font-size: 1em;
+        }
+      }
+    }
+  }
+
+  section#video {
+    grid-column: 3 / 4;
+    
+  }
+
+  footer {
+    font-size: 1em;
+    height: 40px;
+  }
 }
